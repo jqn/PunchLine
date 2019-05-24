@@ -5,16 +5,22 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.MobileAds;
 
+import io.jqn.punchlines.Joker;
+
 public class MainActivity extends AppCompatActivity {
+    Joker mJoker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mJoker = new Joker();
+
     }
 
     @Override
@@ -37,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, mJoker.getJoke(), Toast.LENGTH_SHORT).show();
 
     }
+
 }
