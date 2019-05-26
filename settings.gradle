@@ -1,1 +1,1 @@
-include ':app', ':PunchLines'
+include ':app', ':PunchLines',':jokedisplay'
